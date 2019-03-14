@@ -1,0 +1,29 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    // https://mvnrepository.com/artifact/com.itextpdf/itextpdf
+    compile group: 'com.itextpdf', name: 'itextpdf', version: '5.0.6'
+
+    // https://mvnrepository.com/artifact/org.json/json
+    compile group: 'org.json', name: 'json', version: '20090211'
+
+
+    testCompile "junit:junit:4.12"
+}
+
+jar {
+    baseName = 'check-practice'
+    version =  '0.1.0'
+}
+
+apply plugin: 'application'
+
+mainClassName = 'Main'
